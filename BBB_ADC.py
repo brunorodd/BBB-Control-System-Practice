@@ -13,4 +13,4 @@ while True:
     print(ADC.read_raw(ADC_pin2))
     print("")
     print("")
-    time.sleep(3)
+    time.sleep(1)

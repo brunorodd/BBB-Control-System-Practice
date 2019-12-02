@@ -46,9 +46,13 @@ spi1.msh = 10500000
 spi2.msh = 10500000
 spi1.cshigh = True
 spi2.cshigh = True
+
+write4921(845, spi1,cs1)
+write4921(845,spi2,cs2)
+
 while True:
-    analogValue = 2048
-    analogValue2 = 2048
+    analogValue = input("DAC Input 1: ")
+    analogValue2 = input("DAC Input 2: ")
     write4921(analogValue2, spi2, cs2) #in testing right now
     write4921(analogValue, spi1, cs1)
     time.sleep(2)
