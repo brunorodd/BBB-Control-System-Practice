@@ -17,16 +17,16 @@ TX_pin = "P9_41"
 segA = "P8_7"
 segB = "P8_8"
 
-joystickCenter1 = [0,0,0,0,0,0,0,0,0,0]
-joystickCenter2 = [0,0,0,0,0,0,0,0,0,0]
-joystickForwardList = [0,0,0,0,0,0,0,0,0,0]
-joystickBackwardsList = [0,0,0,0,0,0,0,0,0,0]
-joystickLeftList = [0,0,0,0,0,0,0,0,0,0]
-joystickRightList = [0,0,0,0,0,0,0,0,0,0]
-joystickDirectionList = [0,0,0,0,0,0,0,0,0,0]
-joystickSpeedList = [0,0,0,0,0,0,0,0,0,0]
+joystickCenter1 = []
+joystickCenter2 = []
+joystickForward = []
+joystickBackward = []
+joystickLeft = []
+joystickRight = []
+joystickDirectionList = []
+joystickSpeedList = []
 
-clbCenter = [0,0]
+clbCenter = []
 
 
 def write4921(value, SPI, cs_pin):
@@ -39,11 +39,12 @@ def write4921(value, SPI, cs_pin):
     SPI.xfer2([data])
     GPIO.output(cs_pin, GPIO.HIGH)
 
+# extracts the high byte of a number, used to communicate with the DAC
 def highByte(num):
     length = num.bit_length()
     if length < 8:
         return 0
-    high = num >>  8 # -8 because thats many bits there are in a byte 
+    high = num >>  8 # 8 because thats many bits there are 8 bits in a byte 
     high = high & 0xFF
     return high
 
@@ -53,19 +54,25 @@ def lowByte(num):
 def map_value(x, in_min, in_max, out_min, out_max):
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
           
+#this function rounds to the nearest fifth of a number
 def rounder(x, base=5):
      return int(base * round(float(x)/base))
 
+#this is the main calibration function which calibrates the center, direction and speed values
 def calib(index):
-    length = 10
+    length = 50
     calibration_flag = True
-    recalibration = True
+    recalibration = False
     # for calibrating the center
     if index == 0:
         while calibration_flag:
+            del joystickCenter1
+            del joystickCenter2
+            joystickCenter1 = []
+            joystickCenter2 = []
             recalibration = False
             print("Calibrating Joystick Center...")
-            input("Press Enter to Continue: ")
+            input("Center the joystick and press Enter to continue: ")
             time.sleep(0.5)
             for i in range(length):
                 if abs(joystickCenter1[i]-joystickCenter1[i-1]) > 10 or abs(joystickCenter2[i]-joystickCenter2[i-1]) > 10:
@@ -77,7 +84,7 @@ def calib(index):
                 joystickCenter2.append(ADC.read_raw(ADC_pin2))
                 print(joystickCenter1[i])
                 print(joystickCenter2[i])
-                time.sleep(0.5)
+                time.sleep(0.05)
 
             if recalibration:
                 continue
@@ -86,30 +93,113 @@ def calib(index):
                 break
         
         return [sum(joystickCenter1)/len(joystickCenter1),sum(joystickCenter2)/len(joystickCenter2)]
-    # for calibrating the joystick Direction
+
+# for calibrating the upper and lower bounds of each direction to map 
     if index == 1:
         while calibration_flag:
+            del joystickForward[:]
+            joystickForward = []
             recalibration = False
-            print("Calibrating Joystick Direction...")
-            input("Press Enter to Continue: ")
+            print("Calibrating Direction Threshold. Hold the Joystick all the way forward"
+            input("Press Enter to Continue")
             time.sleep(0.5)
             for i in range(length):
-                if abs(joystickDirectionList[i]-joystickDirectionList[i-1]) > 10:
+                if abs(joystickForward[i]-joystickForward[i-1] > 10:
                     print("Error in Calibration. Recalibrating...")
                     recalibration = True
                     time.sleep(1)
                     break
-                joystickDirectionList.append(ADC.read_raw(ADC_pin1))
-                print(joystickDirectionList[i]
-                time.sleep(0.5)
+                joystickForward.append(ADC.read_raw(ADC_pin2))
+                print(joystickForward[i])
+                time.sleep(0.05)
             
             if recalibration:
                 continue
             else:
                 calibration_flag = False
                 break
-                
-        return sum(joystickDirection)/len(joystickDirection)
+        # returns the average of the maximum values for the forward direction
+        return sum(joystickForward)/length
+
+
+    if index == 2:
+        while calibration_flag:
+            del joystickBackward[:]
+            joystickBackward = []
+            recalibration = False
+            print("Calibrating Direction Threshold. Hold the Joystick all the way backward")
+            input("Press Enter to Continue")
+            time.sleep(0.5)
+            for i in range(length):
+                if abs(joystickBackward[i]-joystickBackward[i-1]) > 10:
+                    print("Error in Calibration. Recalibrating...")
+                    recalibration = True
+                    time.sleep(1)
+                    break
+                joystickBackward.append(ADC.read_raw(ADC_pin2))
+                print(joystickBackward[i])
+                time.sleep(0.05)
+
+            if recalibration:
+                continue
+            else:
+                calibration_flag = False
+                break
+        #returns the average of the maximum values for the backward direction 
+        return sum(joystickBackward)/length
+
+    if index == 3:
+        while calibration_flag:
+            del joystickLeft[:]
+            joystickLeft = []
+            recalibration = False
+            print("Calibrating Speed threshold. Hold the joystick all the way left")
+            input("Press Enter to Continue")
+            time.sleep(0.5)
+            for i in range(length):
+                if abs(joystickLeft[i]-joystickLeft[i-1]) > 10:
+                    print("Error in Calibration. Recalibrating...")
+                    recalibration = True
+                    time.sleep(1)
+                    break
+                joystickLeft.append(ADC.read_raw(ADC_pin1))
+                print(joystickLeft[i])
+                time.sleep(0.05)
+
+            if recalibration:
+                continue
+            else:
+                calibration_flag = False
+                break
+        #returns the average of the maximum values for the left direction
+        return sum(joystickLeft)/length
+
+    if index == 4:
+        while calibration_flag:
+            del joystickRight[:]
+            recalibration = False
+            print("Calibratin Speed threshold. Hold the joystick all the way right")
+            input("Press Enter to continue")
+            time.sleep(0.5)
+            for i in range(length):
+                if abs(joystickRight[i]-joystickRight[i-1]) > 10:
+                    print("Error in Calibration. Recalibrating...")
+                    recalibration = True
+                    time.sleep(1)
+                    break
+                joystickRight.append(ADC.read_raw(ADC_pin1))
+                print(joystickLeft[i])
+                time.sleep(0.05)
+            
+            if recalibration:
+                continue
+            else:
+                calibration_flag = False
+                break
+        return sum(joystickRight)/length
+
+
+
 
 
 GPIO.setup(cs1, GPIO.OUT)
@@ -132,17 +222,38 @@ spi2.cshigh = True
 
 
 while True:
-    clbCenter = calib(0)
+
+    
+    joystickForwardMax = calib(1)
+    joystickBackwardMax = calib(2)
+    joystickLeftMax = calib(3)
+    joystickRightMax = calib(4) #obtains the maximum value for the Right Direction 
+    
+
     joystickSpeed = ADC.read_raw(ADC_pin1)
     joystickDirection = ADC.read_raw(ADC_pin2)
     
-
-    print(joystickSpeed)
     print(joystickDirection)
     print("")
+   
+   # this calibrates the center until it is fully calibrated
+    while center_calibrated == False:
+        clbCenter = calib(0)
+        print("Recenter the Joystick")
+        time.sleep(3)
+        print(joystickDirection)
+        print(joystickSpeed)
+        input("Press Enter to continue")
+        if abs(joystickDirection-clbCenter[0]) > 10 or abs(joystickSpeed-clbCenter[1]) > 10:
+            print("Error. Restarting Recentering")
+            input("Press Enter")
+            continue
+        else:
+            center_calibrated = True
     
-    joystickSpeed = map_value(joystickSpeed, 1700, 2680, 640, 1040)
-    joystickDirection = map_value(joystickDirection, 1700, 2750, 640, 1040)
+    
+    joystickSpeed = map_value(joystickSpeed, joystickForwardMax, joystickBackwardMax, 640, 1040)
+    joystickDirection = map_value(joystickDirection, joystickLeftMax, joystickRightMax, 640, 1040)
     
     joystickSpeed = rounder(int(joystickSpeed))
     joystickDirection = rounder(int(joystickDirection))
