@@ -17,16 +17,16 @@ TX_pin = "P9_41"
 segA = "P8_7"
 segB = "P8_8"
 
-joystickCenter1 = []
-joystickCenter2 = []
-joystickForward = []
-joystickBackward = []
-joystickLeft = []
-joystickRight = []
-joystickDirectionList = []
-joystickSpeedList = []
+joystickCenter1 = [0]
+joystickCenter2 = [0]
+joystickForward = [0]
+joystickBackward = [0]
+joystickLeft = [0]
+joystickRight = [0]
+joystickDirectionList = [0]
+joystickSpeedList = [0]
 
-clbCenter = []
+clbCenter = [0]
 
 
 def write4921(value, SPI, cs_pin):
@@ -51,6 +51,7 @@ def highByte(num):
 def lowByte(num):
     return num & 0xFF
 
+#this function just maps a set of values to another
 def map_value(x, in_min, in_max, out_min, out_max):
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
           
@@ -97,14 +98,14 @@ def calib(index):
 # for calibrating the upper and lower bounds of each direction to map 
     if index == 1:
         while calibration_flag:
-            del joystickForward[:]
-            joystickForward = []
+            joystickForward[:] = []
+            #joystickForward = []
             recalibration = False
-            print("Calibrating Direction Threshold. Hold the Joystick all the way forward"
-            input("Press Enter to Continue")
+            print("Calibrating Direction Threshold. Hold the Joystick all the way forward")
+            input("Press Enter to Continue: ")
             time.sleep(0.5)
             for i in range(length):
-                if abs(joystickForward[i]-joystickForward[i-1] > 10:
+                if abs(joystickForward[i]-joystickForward[i-1]) > 10:
                     print("Error in Calibration. Recalibrating...")
                     recalibration = True
                     time.sleep(1)
@@ -124,8 +125,7 @@ def calib(index):
 
     if index == 2:
         while calibration_flag:
-            del joystickBackward[:]
-            joystickBackward = []
+            joystickBackward[:] = []
             recalibration = False
             print("Calibrating Direction Threshold. Hold the Joystick all the way backward")
             input("Press Enter to Continue")
@@ -150,8 +150,7 @@ def calib(index):
 
     if index == 3:
         while calibration_flag:
-            del joystickLeft[:]
-            joystickLeft = []
+            joystickLeft[:] = []
             recalibration = False
             print("Calibrating Speed threshold. Hold the joystick all the way left")
             input("Press Enter to Continue")
@@ -176,7 +175,7 @@ def calib(index):
 
     if index == 4:
         while calibration_flag:
-            del joystickRight[:]
+            joystickRight[:] = []
             recalibration = False
             print("Calibratin Speed threshold. Hold the joystick all the way right")
             input("Press Enter to continue")
@@ -246,7 +245,7 @@ while True:
         input("Press Enter to continue")
         if abs(joystickDirection-clbCenter[0]) > 10 or abs(joystickSpeed-clbCenter[1]) > 10:
             print("Error. Restarting Recentering")
-            input("Press Enter")
+            q=input("Press Enter")
             continue
         else:
             center_calibrated = True
