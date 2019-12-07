@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\Bruno\Desktop\Wheelchair_Project_Files\PCB_DAC\PCB_DAC.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=pcb_dac-plated.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=pcb_dac-nonplated.txt|DrillLayers=gtl,gbl

@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=R? NewDesignator=R01
+Change Component Designator: OldDesignator=R? NewDesignator=R21
+Change Pin Designator/Name:  Old Designator=DAC-8 Old Name=VOUT New Designator =VOUT New Name=8

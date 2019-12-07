@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=GND Pin=Joystick-8
+Removed Pin From Net: NetName=NetJoystick_4 Pin=OMNI-2
+Removed Pin From Net: NetName=GND Pin=OMNI-7
+Removed Pin From Net: NetName=NetOMNI_1 Pin=P2-1
+Removed Pin From Net: NetName=NetOMNI_5 Pin=R4-2
+Removed Pin From Net: NetName=NetJoystick_2 Pin=R6-1
+Change Component Designator: OldDesignator=Reset NewDesignator=Power
+Added Pin To Net: NetName=GND Pin=Joystick-7
+Added Pin To Net: NetName=NetJoystick_6 Pin=Joystick-8
+Added Pin To Net: NetName=NetJoystick_2 Pin=OMNI-4
+Added Pin To Net: NetName=NetJoystick_6 Pin=OMNI-7
+Added Pin To Net: NetName=GND Pin=OMNI-8
+Added Pin To Net: NetName=NetOMNI_5 Pin=P2-1
+Added Pin To Net: NetName=NetJoystick_6 Pin=R1-1
+Added Pin To Net: NetName=NetOMNI_1 Pin=R4-2
+Added Pin To Net: NetName=NetJoystick_4 Pin=R8-1
+Added Pin To Net: NetName=NetJoystick_5 Pin=Joystick-5
+Added Pin To Net: NetName=NetJoystick_5 Pin=R6-1
+Added Net: Name=NetJoystick_5
+Added Pin To Net: NetName=NetJoystick_9 Pin=Joystick-9
+Added Pin To Net: NetName=NetJoystick_9 Pin=OMNI-6
+Added Net: Name=NetJoystick_9
+Added Pin To Net: NetName=NetOMNI_2 Pin=OMNI-2
+Added Pin To Net: NetName=NetOMNI_2 Pin=R3-2
+Added Net: Name=NetOMNI_2
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component Power HSMG-C150
+Added Member To Class: ClassName=BBB_PCB Member=Component R12 2.7k

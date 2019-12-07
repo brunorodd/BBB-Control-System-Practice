@@ -1,0 +1,52 @@
+Removed Pin From Net: NetName=NetDAC_8 Pin=DAC-8
+Removed Pin From Net: NetName=NetJoystick_5 Pin=R6-1
+Removed Pin From Net: NetName=NetD1_1 Pin=R6-2
+Removed Pin From Net: NetName=NetJoystick_4 Pin=R8-1
+Removed Pin From Net: NetName=NetD2_1 Pin=R8-2
+Removed Member From Class: ClassName=BBB_PCB Member=R6
+Removed Member From Class: ClassName=BBB_PCB Member=R8
+Change Component Designator: OldDesignator=R2 NewDesignator=R?
+Added Component: Designator=C1(HDR1X2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R?(RESC2010(5025)_L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "2010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "5025"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.75 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1000.00 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R?(RESC2010(5025)_L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "2010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "5025"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.75 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1000.00 Ohm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=NetDAC_8 Pin=DAC-8
+Added Pin To Net: NetName=NetJoystick_4 Pin=R?-1
+Added Pin To Net: NetName=NetJoystick_5 Pin=R?-1
+Added Pin To Net: NetName=NetD1_1 Pin=R?-2
+Added Pin To Net: NetName=NetD2_1 Pin=R?-2
+Added Member To Class: ClassName=BBB_PCB Member=Component C1 Comment
+Added Member To Class: ClassName=BBB_PCB Member=Component C1
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component P1 Header 5
+Added Member To Class: ClassName=BBB_PCB Member=Component P2 5-146280-2
+Added Member To Class: ClassName=BBB_PCB Member=Component R? 1K 5% 2010(5025)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? 1K 5% 2010(5025)
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330.
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R.
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R

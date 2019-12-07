@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=R7 Old Footprint=RESC2512(6432)_N New Footprint=RESC1005X40X25NL05T05
+Change Component Footprint: Designator=R9 Old Footprint=RESC2512(6432)_N New Footprint=RESC1005X40X25NL05T05
+Change Component Comment: Designator=R7 Old Comment=560R 5% 2512(6432) New Comment=560
+Change Component Comment: Designator=R9 Old Comment=560R 5% 2512(6432) New Comment=560
+Change Pin Designator/Name:  Old Designator=DAC-8 Old Name=VOUT New Designator =VOUT New Name=8

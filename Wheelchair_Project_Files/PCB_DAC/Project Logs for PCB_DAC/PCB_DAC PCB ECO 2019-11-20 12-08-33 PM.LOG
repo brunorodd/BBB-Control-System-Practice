@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=NetDAC_8 Pin=DAC-8
+Removed Pin From Net: NetName=NetDAC_8 Pin=OP-3
+Change Component Designator: OldDesignator=R10 NewDesignator=R01
+Change Component Designator: OldDesignator=R12 NewDesignator=R21
+Added Component: Designator=P?(HDR1X2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R?(RESC3216X60X45NL10T20)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "CRCW12061K80FKEA"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetDAC_8 Pin=DAC-8
+Added Pin To Net: NetName=NetDAC_8 Pin=OP-5
+Added Pin To Net: NetName=NetC1_2 Pin=P?-1
+Added Pin To Net: NetName=GND Pin=P?-2
+Added Pin To Net: NetName=NetOP_6 Pin=OP-6
+Added Pin To Net: NetName=NetOP_6 Pin=R01-2
+Added Pin To Net: NetName=NetOP_6 Pin=R21-1
+Added Net: Name=NetOP_6
+Added Pin To Net: NetName=NetOP_7 Pin=OP-7
+Added Pin To Net: NetName=NetOP_7 Pin=R4-1
+Added Pin To Net: NetName=NetOP_7 Pin=R21-2
+Added Net: Name=NetOP_7
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Net: Name=NetR3_1
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component P1 Header 5
+Added Member To Class: ClassName=BBB_PCB Member=Component P2 5-146280-2
+Added Member To Class: ClassName=BBB_PCB Member=Component P? C1
+Added Member To Class: ClassName=BBB_PCB Member=Component R01 560
+Added Member To Class: ClassName=BBB_PCB Member=Component R21 2.7k
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+PCB-ECO: Change Pad Pin/Pkg Length: Old=0mil New=1mil

@@ -1,0 +1,9 @@
+Change Component Designator: OldDesignator=Joystick1 NewDesignator=Joystick
+Change Component Designator: OldDesignator=OMNI1 NewDesignator=OMNI
+Change Component Designator: OldDesignator=pins NewDesignator=P9
+Change Component Designator: OldDesignator=pins? NewDesignator=P8
+Change Component Designator: OldDesignator=Power1 NewDesignator=TX
+Change Component Designator: OldDesignator=SW1 NewDesignator=CLB
+Change Component Designator: OldDesignator=Switch NewDesignator=Power
+Change Component Designator: OldDesignator=U1 NewDesignator=DAC
+Change Component Designator: OldDesignator=U2 NewDesignator=DAC

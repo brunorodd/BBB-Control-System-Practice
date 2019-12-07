@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: PCB_DAC.PcbDoc   2019-12-04  11:22:10 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : PCB_DAC-Plated.TXT
+ASCII Non-Plated RoundHoles File : PCB_DAC-NonPlated.TXT
+EIA File   : PCB_DAC.DRL
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      28mil (0.711mm)                                           Round             37        PTH        0.00inch (0.00mm)
+T2      35mil (0.89mm)                                            Round             4         PTH        0.00inch (0.00mm)
+T3      35mil (0.9mm)                                             Round             108       PTH        0.00inch (0.00mm)
+T4      47mil (1.194mm)                                           Round             18        PTH        0.00inch (0.00mm)
+T5      126mil (3.2mm)                                            Round             2         NPTH       0.00inch (0.00mm)
+T6      126mil (3.2mm)                                            Round             2         NPTH       0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              171
+
+Total Processing Time (hh:mm:ss) : 00:00:00

@@ -1,0 +1,55 @@
+Removed Pin From Net: NetName=NetDAC_8 Pin=DAC-8
+Added Component: Designator=C1(HDR1X2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U?(D0008A_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Code_IPC"; Value = "SOIC127P600-8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "MS-012-AA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Code_JEITA"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=LM358-N&fileType=pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CompType"; Value = "Amplifiers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "High-Reliability"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "SOIC Narrow, 4.9 x 3.9 x 1.45mm, 8 Lead, 1.27mm Pitch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "D0008A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageTopMarking"; Value = "NSZXTT*LM*358AM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PinCount"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PowerWise"; Value = "N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "N"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=NetDAC_8 Pin=DAC-8
+Added Pin To Net: NetName=NetDAC_8 Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=R2-1
+Added Pin To Net: NetName=NetR1_2 Pin=U?-8
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_1 Pin=R21-2
+Added Pin To Net: NetName=NetR4_1 Pin=U?-1
+Added Net: Name=NetR4_1
+Added Pin To Net: NetName=NetR10_2 Pin=R10-2
+Added Pin To Net: NetName=NetR10_2 Pin=R21-1
+Added Pin To Net: NetName=NetR10_2 Pin=U?-2
+Added Net: Name=NetR10_2
+Added Member To Class: ClassName=BBB_PCB Member=Component C1 Comment
+Added Member To Class: ClassName=BBB_PCB Member=Component C1
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component P1 Header 5
+Added Member To Class: ClassName=BBB_PCB Member=Component P2 5-146280-2
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component U? LM358AM

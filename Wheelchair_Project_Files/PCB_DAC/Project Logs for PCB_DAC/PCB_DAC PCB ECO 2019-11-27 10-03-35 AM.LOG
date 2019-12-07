@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=NetDAC_8 Pin=DAC-8
+Added Pin To Net: NetName=NetDAC_8 Pin=DAC-8
+Added Pin To Net: NetName=NetOMNI_5 Pin=Joystick-1
+Change Net Name : Old Net Name=NetOMNI_5 New Net Name=NetJoystick_1
+Added Member To Class: ClassName=BBB_PCB Member=Component C1 Comment
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component P1 Header 5
+Added Member To Class: ClassName=BBB_PCB Member=Component P2 5-146280-2
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R3) 1K8 5% 2512(6432)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R6) 1K 5% 2010(5025)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R4) 1K8 5% 2512(6432)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R8) 1K 5% 2010(5025)
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R.
+Added Member To Class: ClassName=BBB_PCB Member=Component  330.
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330

@@ -1,0 +1,14 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [PCB_DAC.PrjPcb]
+   Generated File[PCB_DAC-Plated.TXT]
+   Generated File[PCB_DAC-NonPlated.TXT]
+   Generated File[PCB_DAC.DRL]
+   Generated File[PCB_DAC.LDP]
+   Generated File[PCB_DAC.DRR]
+
+
+Files Generated   : 5
+Documents Printed : 0
+
+Finished Output Generation At 11:22:10 AM On 2019-12-04

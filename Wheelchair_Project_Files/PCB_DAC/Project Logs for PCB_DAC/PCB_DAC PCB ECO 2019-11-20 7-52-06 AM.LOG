@@ -1,0 +1,31 @@
+Removed Pin From Net: NetName=NetDAC_8 Pin=DAC-8
+Added Component: Designator=U?(PDIP300-P8)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "MS-001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.microchip.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://ww1.microchip.com/downloads/en/DeviceDoc/22248a.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.microchip.com/stellent/groups/techpub_sg/documents/packagingspec/en012702.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "revA, Apr-2010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "8-Lead Plastic Dual In-Line (P) - 300 mil Body [PDIP]"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "PDIP300-P8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "revBB, Aug-2009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RevisionNote"; Value = "URLs added. DatasheetVersion updated. Sch updated."; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetDAC_8 Pin=DAC-8
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component P1 Header 5
+Added Member To Class: ClassName=BBB_PCB Member=Component P2 5-146280-2
+Added Member To Class: ClassName=BBB_PCB Member=Component R12 2.7k
+Added Member To Class: ClassName=BBB_PCB Member=Component R? 560
+Added Member To Class: ClassName=BBB_PCB Member=Component R? 2.7k
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330

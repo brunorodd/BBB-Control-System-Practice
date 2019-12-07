@@ -1,0 +1,110 @@
+Removed Pin From Net: NetName=GND Pin=U?-4
+Change Component Designator: OldDesignator=C? NewDesignator=C1
+Change Component Designator: OldDesignator=D? NewDesignator=D1
+Change Component Designator: OldDesignator=D? NewDesignator=D2
+Change Component Designator: OldDesignator=Joystick? NewDesignator=Joystick1
+Change Component Designator: OldDesignator=OMNI? NewDesignator=OMNI1
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Designator: OldDesignator=P? NewDesignator=P2
+Change Component Designator: OldDesignator=P? NewDesignator=pins
+Change Component Designator: OldDesignator=Power? NewDesignator=Power1
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Change Component Designator: OldDesignator=R? NewDesignator=R5
+Change Component Designator: OldDesignator=R? NewDesignator=R6
+Change Component Designator: OldDesignator=R? NewDesignator=R7
+Change Component Designator: OldDesignator=R? NewDesignator=R8
+Change Component Designator: OldDesignator=R? NewDesignator=R9
+Change Component Designator: OldDesignator=R? NewDesignator=R10
+Change Component Designator: OldDesignator=R? NewDesignator=R11
+Change Component Designator: OldDesignator=R? NewDesignator=R12
+Change Component Designator: OldDesignator=R? NewDesignator=R12
+Change Component Designator: OldDesignator=SW? NewDesignator=SW1
+Change Component Designator: OldDesignator=SW? NewDesignator=Switch
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Component Designator: OldDesignator=U? NewDesignator=U2
+Added Component: Designator=OP(D0008A_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Code_IPC"; Value = "SOIC127P600-8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "MS-012-AA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Code_JEITA"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=LM358-N&fileType=pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CompType"; Value = "Amplifiers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "High-Reliability"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "SOIC Narrow, 4.9 x 3.9 x 1.45mm, 8 Lead, 1.27mm Pitch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "D0008A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageTopMarking"; Value = "NSZXTT*LM*358AM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PinCount"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PowerWise"; Value = "N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Y"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=OP-4
+Change Net Name : Old Net Name=NetD?_1 New Net Name=NetD1_1
+Change Net Name : Old Net Name=NetJoystick?_1 New Net Name=NetJoystick1_1
+Change Net Name : Old Net Name=NetJoystick?_2 New Net Name=NetJoystick1_2
+Change Net Name : Old Net Name=NetJoystick?_3 New Net Name=NetJoystick1_3
+Change Net Name : Old Net Name=NetJoystick?_4 New Net Name=NetJoystick1_4
+Change Net Name : Old Net Name=NetJoystick?_6 New Net Name=NetJoystick1_6
+Change Net Name : Old Net Name=NetJoystick?_7 New Net Name=NetJoystick1_7
+Change Net Name : Old Net Name=NetOMNI?_1 New Net Name=NetOMNI1_1
+Change Net Name : Old Net Name=NetOMNI?_3 New Net Name=NetOMNI1_3
+Change Net Name : Old Net Name=NetOMNI?_4 New Net Name=NetOMNI1_4
+Change Net Name : Old Net Name=NetOMNI?_5 New Net Name=NetOMNI1_5
+Change Net Name : Old Net Name=NetP?_7 New Net Name=Netpins_7
+Change Net Name : Old Net Name=NetP?_10 New Net Name=Netpins_10
+Change Net Name : Old Net Name=NetP?_15 New Net Name=Netpins_15
+Change Net Name : Old Net Name=NetP?_18 New Net Name=Netpins_18
+Change Net Name : Old Net Name=NetP?_22 New Net Name=Netpins_22
+Change Net Name : Old Net Name=NetP?_23 New Net Name=Netpins_23
+Change Net Name : Old Net Name=NetP?_27 New Net Name=Netpins_27
+Change Net Name : Old Net Name=NetP?_30 New Net Name=Netpins_30
+Change Net Name : Old Net Name=NetP?_31 New Net Name=Netpins_31
+Change Net Name : Old Net Name=NetP?_41 New Net Name=Netpins_41
+Change Net Name : Old Net Name=NetPower?_2 New Net Name=NetPower1_2
+Change Net Name : Old Net Name=NetU?_8 New Net Name=NetU2_8
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_1 Pin=pins-35
+Added Pin To Net: NetName=NetD2_1 Pin=R8-2
+Added Pin To Net: NetName=NetD2_1 Pin=R9-2
+Added Net: Name=NetD2_1
+Added Pin To Net: NetName=NetOP_1 Pin=OP-1
+Added Pin To Net: NetName=NetOP_1 Pin=R3-1
+Added Pin To Net: NetName=NetOP_1 Pin=R12-2
+Added Net: Name=NetOP_1
+Added Pin To Net: NetName=NetOP_2 Pin=OP-2
+Added Pin To Net: NetName=NetOP_2 Pin=R10-2
+Added Pin To Net: NetName=NetOP_2 Pin=R12-1
+Added Net: Name=NetOP_2
+Added Pin To Net: NetName=NetOP_3 Pin=OP-3
+Added Pin To Net: NetName=NetOP_3 Pin=U1-8
+Added Net: Name=NetOP_3
+Added Pin To Net: NetName=NetOP_8 Pin=OP-8
+Added Pin To Net: NetName=NetOP_8 Pin=R1-2
+Added Pin To Net: NetName=NetOP_8 Pin=R2-1
+Added Net: Name=NetOP_8
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Net: Name=NetR4_1
+Added Member To Class: ClassName=BBB_PCB Member=Component D2 1SMB5920BT3G
+Added Member To Class: ClassName=BBB_PCB Member=Component OP LM358AM/NOPB
+Added Member To Class: ClassName=BBB_PCB Member=Component P1 5-146280-2
+Added Member To Class: ClassName=BBB_PCB Member=Component pins Header 24X2
+Added Member To Class: ClassName=BBB_PCB Member=Component R1 150
+Added Member To Class: ClassName=BBB_PCB Member=Component R2 330
+Added Member To Class: ClassName=BBB_PCB Member=Component R3 1.8K
+Added Member To Class: ClassName=BBB_PCB Member=Component R4 1.8K
+Added Member To Class: ClassName=BBB_PCB Member=Component R5 470
+Added Member To Class: ClassName=BBB_PCB Member=Component R6 1K 1% 0805
+Added Member To Class: ClassName=BBB_PCB Member=Component R7 560
+Added Member To Class: ClassName=BBB_PCB Member=Component R8 1K 1% 0805
+Added Member To Class: ClassName=BBB_PCB Member=Component R9 560
+Added Member To Class: ClassName=BBB_PCB Member=Component R10 560
+Added Member To Class: ClassName=BBB_PCB Member=Component R11 330R 1% 0603(1608)
+Added Member To Class: ClassName=BBB_PCB Member=Component R12 2.7k
+Added Member To Class: ClassName=BBB_PCB Member=Component R12 330R
+Added Member To Class: ClassName=BBB_PCB Member=Component SW1 Calibration
+Added Member To Class: ClassName=BBB_PCB Member=Component U1 MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component U2 MCP4921-E/MS

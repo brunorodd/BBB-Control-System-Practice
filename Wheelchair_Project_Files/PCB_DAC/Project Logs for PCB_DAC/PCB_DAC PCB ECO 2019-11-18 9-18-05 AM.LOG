@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND Pin=P9-47
+Removed Pin From Net: NetName=GND Pin=P9-48
+Added Pin To Net: NetName=GND Pin=P9-43
+Added Pin To Net: NetName=GND Pin=P9-44
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component Power HSMG-C150
+Added Member To Class: ClassName=BBB_PCB Member=Component R12 2.7k

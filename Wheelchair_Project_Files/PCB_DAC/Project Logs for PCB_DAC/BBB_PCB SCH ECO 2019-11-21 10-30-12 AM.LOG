@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=OP Old Footprint=ONSC-SOIC-8-751-07_V New Footprint=RESC1005X40X25NL05T05
+Change Pin Designator/Name:  Old Designator=DAC-8 Old Name=VOUT New Designator =VOUT New Name=8

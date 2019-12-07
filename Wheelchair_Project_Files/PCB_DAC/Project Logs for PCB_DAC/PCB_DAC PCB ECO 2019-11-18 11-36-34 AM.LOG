@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NetC1_2 Pin=P9-8
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component Power HSMG-C150
+Added Member To Class: ClassName=BBB_PCB Member=Component R12 2.7k

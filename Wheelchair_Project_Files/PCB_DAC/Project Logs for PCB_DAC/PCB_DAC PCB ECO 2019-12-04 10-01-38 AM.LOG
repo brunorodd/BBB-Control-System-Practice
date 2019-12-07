@@ -1,0 +1,123 @@
+Removed Pin From Net: NetName=NetDAC_8 Pin=DAC-8
+Removed Pin From Net: NetName=NetDAC_8 Pin=U1-3
+Added Component: Designator=Joystick(NORCO-171-009-113R911_V)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "3D Model"; Value = "171-009-113Rzzz.pdf171-009-113Rzzz.stp171-009-113Rzzz.igs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Associated Product"; Value = "160-09MA-ND-DUSTCOVERFORDB9MALE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Catalog Drawings"; Value = "Footprint9,15,25-,37Position171,172SeriesDipSolder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Connectors,Interconnects"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Style"; Value = "D-Sub"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Plug,MalePins"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish Thickness"; Value = "Flash"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Signal"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.norcomp.net/rohspdfs/Connectors/17Y/171/171-YYY-113RYY1.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. 11, 09/2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Family"; Value = "D-SubConnectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "BoardLock,GroundingIndents"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Flange Feature"; Value = "MatingSide,FemaleScrewlock(4-40)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Polyamide(PA9T),Nylon9T"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ingress Protection"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Norcomp"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.norcomp.net/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mating Products"; Value = "4209FE-ND-CONND-SUBRCPT9POSVERTSOLDER709FE-ND-CONNDB9CRIMPFEMALENICKEL709FER-ND-CONNDB9CRIMPFEMALETIN186-009-292L001-ND-CONNDSUBRCPT9POSSTRIDC186-009-292L551-ND-CONNDSUBRCPT9POSSTRIDC209F-ND-CONNDSUBRCPT9POSSTRSLDRCUP709F-ND-CONNDB9CRIMPFEMALETIN1709F-ND-CONNDB9CRIMPFEMYLWCHROME4209F-ND-CONND-SUBRCPT9POSVERTSOLDER1709FA-ND-CONNDB9CRIMPFEMYLWCHROME209FEA-ND-CONNDSUBRCPT9POSSTRSLDRCUP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "ThroughHole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "ThroughHole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "9"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Online Catalog"; Value = "171Series"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-50°C~100°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Other Names"; Value = "171009113R9119209ME"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Other Related Documents"; Value = "171-009-113R911MaterialDeclaration"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "Male Header, Pitch 2.77 mm, 2 Row, 9 Position, Height 12.52 mm, Tail Length 4.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "171-009-113R911"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Training Modules"; Value = "D-SubConnectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "171"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shell Material, Finish"; Value = "Steel,NickelPlated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shell Size, Connector Layout"; Value = "1(DE,E)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Standard Package"; Value = "80"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "-"; VariantName = "[No Variations]"
+Added Component: Designator=OMNI(NORCO-171-009-113R911_V)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "3D Model"; Value = "171-009-113Rzzz.pdf171-009-113Rzzz.stp171-009-113Rzzz.igs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Associated Product"; Value = "160-09MA-ND-DUSTCOVERFORDB9MALE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Catalog Drawings"; Value = "Footprint9,15,25-,37Position171,172SeriesDipSolder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Connectors,Interconnects"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Style"; Value = "D-Sub"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Plug,MalePins"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish Thickness"; Value = "Flash"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Signal"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.norcomp.net/rohspdfs/Connectors/17Y/171/171-YYY-113RYY1.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. 11, 09/2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Family"; Value = "D-SubConnectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "BoardLock,GroundingIndents"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Flange Feature"; Value = "MatingSide,FemaleScrewlock(4-40)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Polyamide(PA9T),Nylon9T"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ingress Protection"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Norcomp"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.norcomp.net/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mating Products"; Value = "4209FE-ND-CONND-SUBRCPT9POSVERTSOLDER709FE-ND-CONNDB9CRIMPFEMALENICKEL709FER-ND-CONNDB9CRIMPFEMALETIN186-009-292L001-ND-CONNDSUBRCPT9POSSTRIDC186-009-292L551-ND-CONNDSUBRCPT9POSSTRIDC209F-ND-CONNDSUBRCPT9POSSTRSLDRCUP709F-ND-CONNDB9CRIMPFEMALETIN1709F-ND-CONNDB9CRIMPFEMYLWCHROME4209F-ND-CONND-SUBRCPT9POSVERTSOLDER1709FA-ND-CONNDB9CRIMPFEMYLWCHROME209FEA-ND-CONNDSUBRCPT9POSSTRSLDRCUP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "ThroughHole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "ThroughHole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "9"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Online Catalog"; Value = "171Series"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-50°C~100°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Other Names"; Value = "171009113R9119209ME"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Other Related Documents"; Value = "171-009-113R911MaterialDeclaration"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "Male Header, Pitch 2.77 mm, 2 Row, 9 Position, Height 12.52 mm, Tail Length 4.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "171-009-113R911"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Training Modules"; Value = "D-SubConnectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "171"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shell Material, Finish"; Value = "Steel,NickelPlated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shell Size, Connector Layout"; Value = "1(DE,E)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Standard Package"; Value = "80"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "-"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetDAC_8 Pin=DAC-8
+Added Pin To Net: NetName=NetJoystick_1 Pin=Joystick-1
+Added Pin To Net: NetName=NetJoystick_2 Pin=Joystick-2
+Added Pin To Net: NetName=NetJoystick_3 Pin=Joystick-3
+Added Pin To Net: NetName=NetJoystick_4 Pin=Joystick-4
+Added Pin To Net: NetName=GND Pin=Joystick-5
+Added Pin To Net: NetName=NetJoystick_6 Pin=Joystick-6
+Added Pin To Net: NetName=NetJoystick_7 Pin=Joystick-7
+Added Pin To Net: NetName=GND Pin=Joystick-8
+Added Pin To Net: NetName=NetJoystick_7 Pin=Joystick-9
+Added Pin To Net: NetName=NetOMNI_1 Pin=OMNI-1
+Added Pin To Net: NetName=NetJoystick_4 Pin=OMNI-2
+Added Pin To Net: NetName=NetOMNI_3 Pin=OMNI-3
+Added Pin To Net: NetName=NetOMNI_4 Pin=OMNI-4
+Added Pin To Net: NetName=NetOMNI_5 Pin=OMNI-5
+Added Pin To Net: NetName=NetOMNI_6 Pin=OMNI-6
+Added Pin To Net: NetName=GND Pin=OMNI-7
+Added Pin To Net: NetName=NetOMNI_6 Pin=OMNI-8
+Added Pin To Net: NetName=NetJoystick_6 Pin=OMNI-9
+Added Pin To Net: NetName=NetDAC_8 Pin=U1-3
+Added Member To Class: ClassName=BBB_PCB Member=Component C1 Comment
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component Joystick 171-009-113R911
+Added Member To Class: ClassName=BBB_PCB Member=Component OMNI 171-009-113R911
+Added Member To Class: ClassName=BBB_PCB Member=Component P1 Header 5
+Added Member To Class: ClassName=BBB_PCB Member=Component P2 5-146280-2
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R8) 1K 5% 2010(5025)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R6) 1K 5% 2010(5025)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R3) 1K8 5% 2512(6432)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R4) 1K8 5% 2512(6432)
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330.
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R.
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R

@@ -1,0 +1,41 @@
+Removed Pin From Net: NetName=NetDAC_8 Pin=DAC-8
+Added Component: Designator=R7(RESC2512(6432)_M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "2512"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "6432"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "560.00 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R9(RESC2512(6432)_M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "2512"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "6432"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "560.00 Ohm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetDAC_8 Pin=DAC-8
+Added Pin To Net: NetName=NetD1_1 Pin=R7-1
+Added Pin To Net: NetName=GND Pin=R7-2
+Added Pin To Net: NetName=GND Pin=R9-1
+Added Pin To Net: NetName=NetD2_1 Pin=R9-2
+Added Member To Class: ClassName=BBB_PCB Member=Component C1 Comment
+Added Member To Class: ClassName=BBB_PCB Member=Component DAC MCP4921-E/MS
+Added Member To Class: ClassName=BBB_PCB Member=Component P1 Header 5
+Added Member To Class: ClassName=BBB_PCB Member=Component P2 5-146280-2
+Added Member To Class: ClassName=BBB_PCB Member=Component R7 560
+Added Member To Class: ClassName=BBB_PCB Member=Component R9 560
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R8) 1K 5% 2010(5025)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R6) 1K 5% 2010(5025)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R4) 1K8 5% 2512(6432)
+Added Member To Class: ClassName=BBB_PCB Member=Component R? (R3) 1K8 5% 2512(6432)
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R.
+Added Member To Class: ClassName=BBB_PCB Member=Component  330.
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330R
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
+Added Member To Class: ClassName=BBB_PCB Member=Component  330
