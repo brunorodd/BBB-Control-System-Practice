@@ -1,7 +1,7 @@
 
 ## BBB configure pins script
 #ADC is already configured upon startup
-clear
+sudo su
 sleep 1
 
 # configure pins for the
