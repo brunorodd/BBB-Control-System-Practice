@@ -1,0 +1,164 @@
+BeagleBone Black notes for current Co-op Student
+
+Hello this is Bruno, the current co-op student for this semester, here are a few notes about the Beaglebone that are up to date to save you trouble looking at older versions of the BBB documentation.
+
+*Preliminary information*
+- if using PuTTy - > SSH HOST: 192.168.7.2, Port: 22
+- login: Debian -> pass: temppwd
+- once inside, ssh into lci using "ssh lci@192.168.7.2" the password is "lci1234" no quotes
+- using the "ls" command you should find the exploringBB git repository that is referenced inside the giant exploring BBB book on one of the tables in the lab and my BBB_control directory where i keep my initialization scripts for the internet and pins
+- for quick permissions you should be using the "sudo su" command and overwriting from there
+- you should familiarize yourself with linux commands as soon as possible
+- you should also download WinSCP if using the the BBB wireless to commit from desktop because the BBB wireless does not
+
+**** BE CAREFUL WITH THE AMOUNT OF VOLTAGE YOU PUT THROUGH THE BBB ****
+**** READ THE HOW TO DESTROY YOUR BEAGLEBONE SUBCHAPTER IN THE BOOK FOR MORE INFO ****
+
+1. Hold down the boot button before turning it on if you can't ssh into it normally using PuTTY then try ssh. wait until all the LEDs on the USB turn off then release. If you can ssh into it normally then that's fine.
+
+2. Internet Sharing: if you are using the BBB with the ethernet cable (recommended) here is a link to a video showing you how to internet share between your laptop and BBB. https://www.youtube.com/watch?v=D-NEPiZDSx8. You will have to do this everytime you boot the BBB. I have also written this as a script on the lci account in the BBB and can execute it to avoid writing a few lines on the shell. You will need to reset the internet sharing stuff however.
+
+If you are using the BBB wireless, it is a little bit trickier to connect to the internet. Since all of the UBC wifi require some added user login on the browser you will need to use the "connman" commands on linux. I was able to connect to ubcvisitor using this video https://www.youtube.com/watch?v=wPy0ldR02Is and by trying to connect through the Unidentified network that appeared on the "network and internet" settings in Windows. After that is done, the browser may prompt you to agree to the terms and you should be able to ping google or anything online through PuTTY on the BBB
+
+**** updated **** BBB Wireless has access to the internet permanently now so just ping google from the BBB to confirm
+
+3. Sometimes if you dont turn on with the boot button held down, then you might run out of space on the BBB disk because of some weird writing issue. it is actually really hard to find answers online for this so try to turn on with the boot button. 
+
+4. The BBB has an hdmi input that you can use on any monitor but if you use the hdmi then you can use spi1. I have not tested internet sharing with this method.
+
+5. Since this is a newer image on the BBB disk, you can configure pins using "config-pin P9.21 spi" for example instead of going through /sys/devices/platform/bone_capemgr in the BBB. here is a github repos with all the different modes each pin can have. Warning as some pins have only a set of specific functions. https://github.com/beagleboard/bb.org-overlays/blob/master/tools/beaglebone-universal-io/config-pin
+
+
+***I have written a script in Linux to configure all the pins after startup in BBB_control on the BBB ***
+*** you can run it either after startup or in a C/C++ program that executes the script *** it's labelled "initialize_pins.sh" and run it using "./initialize_pins.sh"
+
+6. Consult the book sometimes but not heavily as it is pretty outdated and the methods they use to configure certain functions for the BBB do not work. 
+
+7. a lot of the answers you may find online pertain to older linux images so be aware of when they were written as what would have worked then may not work now
+
+8. I have currently disabled the hdmi, you can enable it by commenting out the disable_uboot_overlay_video=1 and disable_uboot_overlay_audio=1
+
+9. If you are trying to use pwm , you have to echo the duty cycle and period before enabling the pwm ie. 
+
+echo 1000 > duty_cycle
+echo 2000 > period
+echo 1 > enable
+
+or you can use python to do it for you
+
+10. You can access pins using Python as well using Adafruit_BBIO library on Python, I have a github repository with my Python code for some projects. I can give you access permission if you send me an email -> brunorodriguez1998@gmail.com
+
+11. if you get denied access when running any of the initialization scripts that i setup. Type in "sudo su" on the client which will prompt you for a password and then run the script. Same applies when running Python programs.
+
+13. GitHub: if you have any difficulty pushing changes to git through the beaglebone black because of the TLS connection, i suggest you download WinSCP so you can transfer files from the Beaglebone to the Desktop. Host name: lci@192.168.7.2, User name: lci , password: lci1234 and then locate the files from the beaglebone to copy onto your desktop then commit your changes thorugh your desktop using bash or any other manner.
+
+
+Vim commands
+
+Main
+
+Esc  Gets out of the current mode into the “command mode”. All keys are bound 
+     of commands.
+i	“Insert mode” for inserting text. Keys behave as expected.
+:	“Last-line mode” where Vim expects you to enter a command such as to save the document.
+
+Navigation Keys
+h	moves the cursor one character to the left.
+j or Ctrl + J	moves the cursor down one line.
+k or Ctrl + P	moves the cursor up one line.
+l	moves the cursor one character to the right.
+0	moves the cursor to the beginning of the line.
+$	moves the cursor to the end of the line.
+^	moves the cursor to the first non-empty character of the line
+w	move forward one word (next alphanumeric word)
+W	move forward one word (delimited by a white space)
+5w	move forward five words
+b	move backward one word (previous alphanumeric word)
+B	move backward one word (delimited by a white space)
+5b	move backward five words
+G	move to the end of the file
+
+Navigate around the document
+(	jumps to the previous sentence
+)	jumps to the next sentence
+{	jumps to the previous paragraph
+}	jumps to the next paragraph
+[[	jumps to the previous section
+]]	jumps to the next section
+[]	jump to the end of the previous section
+][	jump to the end of the next section
+
+Insert text
+a	Insert text after the cursor
+A	Insert text at the end of the line
+i	Insert text before the cursor
+o	Begin a new line below the cursor
+O	Begin a new line above the cursor
+
+Special inserts
+:r [filename]	Insert the file [filename] below the cursor
+:r ![command]	Execute [command] and insert its output below the cursor
+
+Delete text
+x	delete character at cursor
+dw	delete a word.
+d0	delete to the beginning of a line.
+d$	delete to the end of a line.
+d)	delete to the end of sentence.
+dgg	delete to the beginning of the file.
+dG	delete to the end of the file.
+dd	delete line
+3dd	delete three lines
+
+Simple replace text
+r{text}	Replace the character under the cursor with {text}
+R	Replace characters instead of inserting them
+ 	
+Copy/Paste text
+yy	copy current line into storage buffer
+["x]yy	Copy the current lines into register x
+p	paste storage buffer after current line
+P	paste storage buffer before current line
+["x]p	paste from register x after current line
+["x]P	paste from register x before current line
+ 	
+Undo/Redo operation
+u	undo the last operation.
+Ctrl+r	redo the last undo.
+ 	
+Search and Replace keys
+/search_text	search document for search_text going forward
+?search_text	search document for search_text going backward
+n	move to the next instance of the result from the search
+N	move to the previous instance of the result
+:%s/original/replacement	Search for the first occurrence of the string “original” and replace it with “replacement”
+:%s/original/replacement/g	Search and replace all occurrences of the string “original” with “replacement”
+:%s/original/replacement/gc	Search for all occurrences of the string “original” but ask for confirmation before replacing them with “replacement”
+ 	
+Bookmarks
+m {a-z A-Z}	Set bookmark {a-z A-Z} at the current cursor position
+:marks	List all bookmarks
+`{a-z A-Z}	Jumps to the bookmark {a-z A-Z}
+ 	
+Select text
+v	Enter visual mode per character
+V	Enter visual mode per line
+Esc	Exit visual mode
+ 	 
+Modify selected text
+~	Switch case
+d	delete a word.
+c	change
+y	yank
+>	shift right
+<	shift left
+!	filter through an external command
+ 	 
+Save and quit
+:q	Quits Vim but fails when file has been changed
+:w	Save the file
+:w new_name	Save the file with the new_name filename
+:wq	Save the file and quit Vim.
+:q!	Quit Vim without saving the changes to the file.
+ZZ	Write file, if modified, and quit Vim
+ZQ	Same as :q! Quits Vim without writing changes
