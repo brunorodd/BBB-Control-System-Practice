@@ -3,7 +3,7 @@ BeagleBone Black notes for current Co-op Student
 Hello this is Bruno, the current co-op student for this semester, here are a few notes about the Beaglebone that are up to date to save you trouble looking at older versions of the BBB documentation.
 
 *Preliminary information*
-- if using PuTTy - > SSH HOST: 192.168.7.2, Port: 22
+- if using PuTTY - > SSH HOST: 192.168.7.2, Port: 22
 - login: Debian -> pass: temppwd
 - once inside, ssh into lci using "ssh lci@192.168.7.2" the password is "lci1234" no quotes
 - using the "ls" command you should find the exploringBB git repository that is referenced inside the giant exploring BBB book on one of the tables in the lab and my BBB_control directory where i keep my initialization scripts for the internet and pins
