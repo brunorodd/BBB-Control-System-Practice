@@ -6,7 +6,8 @@ Hello this is Bruno, the current co-op student for this semester, here are a few
 - if using PuTTY - > SSH HOST: 192.168.7.2, Port: 22
 - login: Debian -> pass: temppwd
 - once inside, ssh into lci using "ssh lci@192.168.7.2" the password is "lci1234" no quotes
-- using the "ls" command you should find the exploringBB git repository that is referenced inside the giant exploring BBB book on one of the tables in the lab and my BBB_control directory where i keep my initialization scripts for the internet and pins
+- using the "ls" command you should find the exploringBB git repository that is referenced inside the giant exploring BBB book on one of 
+  the tables in the lab and my BBB_control directory where i keep my initialization scripts for the internet and pins
 - for quick permissions you should be using the "sudo su" command and overwriting from there
 - you should familiarize yourself with linux commands as soon as possible
 - you should also download WinSCP if using the the BBB wireless to commit from desktop because the BBB wireless does not
@@ -14,29 +15,46 @@ Hello this is Bruno, the current co-op student for this semester, here are a few
 **** BE CAREFUL WITH THE AMOUNT OF VOLTAGE YOU PUT THROUGH THE BBB ****
 **** READ THE HOW TO DESTROY YOUR BEAGLEBONE SUBCHAPTER IN THE BOOK FOR MORE INFO ****
 
-1. Hold down the boot button before turning it on if you can't ssh into it normally using PuTTY then try ssh. wait until all the LEDs on the USB turn off then release. If you can ssh into it normally then that's fine.
+1. Hold down the boot button before turning it on if you can't ssh into it normally using PuTTY then try ssh. wait until all the LEDs on 
+the USB turn off then release. If you can ssh into it normally then that's fine.
 
-2. Internet Sharing: if you are using the BBB with the ethernet cable (recommended) here is a link to a video showing you how to internet share between your laptop and BBB. https://www.youtube.com/watch?v=D-NEPiZDSx8. You will have to do this everytime you boot the BBB. I have also written this as a script on the lci account in the BBB and can execute it to avoid writing a few lines on the shell. You will need to reset the internet sharing stuff however.
+2. Internet Sharing: if you are using the BBB with the ethernet cable (recommended) here is a link to a video showing you how to 
+internet share between your laptop and BBB. https://www.youtube.com/watch?v=D-NEPiZDSx8. You will have to do this everytime you boot the 
+BBB. I have also written this as a script on the lci account in the BBB and can execute it to avoid writing a few lines on the shell. 
+You will need to reset the internet sharing stuff however.
 
-If you are using the BBB wireless, it is a little bit trickier to connect to the internet. Since all of the UBC wifi require some added user login on the browser you will need to use the "connman" commands on linux. I was able to connect to ubcvisitor using this video https://www.youtube.com/watch?v=wPy0ldR02Is and by trying to connect through the Unidentified network that appeared on the "network and internet" settings in Windows. After that is done, the browser may prompt you to agree to the terms and you should be able to ping google or anything online through PuTTY on the BBB
+If you are using the BBB wireless, it is a little bit trickier to connect to the internet. Since all of the UBC wifi require some added 
+user login on the browser you will need to use the "connman" commands on linux. I was able to connect to ubcvisitor using this video 
+https://www.youtube.com/watch?v=wPy0ldR02Is and by trying to connect through the Unidentified network that appeared on the "network and 
+internet" settings in Windows. After that is done, the browser may prompt you to agree to the terms and you should be able to ping 
+google or anything online through PuTTY on the BBB
 
 **** updated **** BBB Wireless has access to the internet permanently now so just ping google from the BBB to confirm
 
-3. Sometimes if you dont turn on with the boot button held down, then you might run out of space on the BBB disk because of some weird writing issue. it is actually really hard to find answers online for this so try to turn on with the boot button. 
+3. Sometimes if you dont turn on with the boot button held down, then you might run out of space on the BBB disk because of some weird 
+writing issue. it is actually really hard to find answers online for this so try to turn on with the boot button. 
 
-4. The BBB has an hdmi input that you can use on any monitor but if you use the hdmi then you can use spi1. I have not tested internet sharing with this method.
+4. The BBB has an hdmi input that you can use on any monitor but if you use the hdmi then you can use spi1. I have not tested internet 
+sharing with this method.
 
-5. Since this is a newer image on the BBB disk, you can configure pins using "config-pin P9.21 spi" for example instead of going through /sys/devices/platform/bone_capemgr in the BBB. here is a github repos with all the different modes each pin can have. Warning as some pins have only a set of specific functions. https://github.com/beagleboard/bb.org-overlays/blob/master/tools/beaglebone-universal-io/config-pin
+5. Since this is a newer image on the BBB disk, you can configure pins using "config-pin P9.21 spi" for example instead of going through 
+/sys/devices/platform/bone_capemgr in the BBB. here is a github repos with all the different modes each pin can have. Warning as some 
+pins have only a set of specific functions. https://github.com/beagleboard/bb.org-overlays/blob/master/tools/beaglebone-universal-
+io/config-pin
 
 
 ***I have written a script in Linux to configure all the pins after startup in BBB_control on the BBB ***
-*** you can run it either after startup or in a C/C++ program that executes the script *** it's labelled "initialize_pins.sh" and run it using "./initialize_pins.sh"
+*** you can run it either after startup or in a C/C++ program that executes the script *** it's labelled "initialize_pins.sh" and run it 
+using "./initialize_pins.sh"
 
-6. Consult the book sometimes but not heavily as it is pretty outdated and the methods they use to configure certain functions for the BBB do not work. 
+6. Consult the book sometimes but not heavily as it is pretty outdated and the methods they use to configure certain functions for the 
+BBB do not work. 
 
-7. a lot of the answers you may find online pertain to older linux images so be aware of when they were written as what would have worked then may not work now
+7. a lot of the answers you may find online pertain to older linux images so be aware of when they were written as what would have 
+worked then may not work now
 
-8. I have currently disabled the hdmi, you can enable it by commenting out the disable_uboot_overlay_video=1 and disable_uboot_overlay_audio=1
+8. I have currently disabled the hdmi, you can enable it by commenting out the disable_uboot_overlay_video=1 and 
+disable_uboot_overlay_audio=1
 
 9. If you are trying to use pwm , you have to echo the duty cycle and period before enabling the pwm ie. 
 
@@ -46,11 +64,16 @@ echo 1 > enable
 
 or you can use python to do it for you
 
-10. You can access pins using Python as well using Adafruit_BBIO library on Python, I have a github repository with my Python code for some projects. I can give you access permission if you send me an email -> brunorodriguez1998@gmail.com
+10. You can access pins using Python as well using Adafruit_BBIO library on Python, I have a github repository with my Python code for 
+some projects. I can give you access permission if you send me an email -> brunorodriguez1998@gmail.com
 
-11. if you get denied access when running any of the initialization scripts that i setup. Type in "sudo su" on the client which will prompt you for a password and then run the script. Same applies when running Python programs.
+11. if you get denied access when running any of the initialization scripts that i setup. Type in "sudo su" on the client which will 
+prompt you for a password and then run the script. Same applies when running Python programs.
 
-13. GitHub: if you have any difficulty pushing changes to git through the beaglebone black because of the TLS connection, i suggest you download WinSCP so you can transfer files from the Beaglebone to the Desktop. Host name: lci@192.168.7.2, User name: lci , password: lci1234 and then locate the files from the beaglebone to copy onto your desktop then commit your changes thorugh your desktop using bash or any other manner.
+13. GitHub: if you have any difficulty pushing changes to git through the beaglebone black because of the TLS connection, i suggest you 
+download WinSCP so you can transfer files from the Beaglebone to the Desktop. Host name: lci@192.168.7.2, User name: lci , password: 
+lci1234 and then locate the files from the beaglebone to copy onto your desktop then commit your changes thorugh your desktop using bash 
+or any other manner.
 
 
 Vim commands
