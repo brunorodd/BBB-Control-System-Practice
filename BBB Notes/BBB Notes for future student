@@ -1,6 +1,7 @@
 BeagleBone Black notes for current Co-op Student
 
-Hello this is Bruno, the current co-op student for this semester, here are a few notes about the Beaglebone that are up to date to save you trouble looking at older versions of the BBB documentation.
+Hello this is Bruno, the current co-op student for this semester, here are a few notes about the Beaglebone that are up to date to save
+you trouble looking at older versions of the BBB documentation.
 
 *Preliminary information*
 - if using PuTTY - > SSH HOST: 192.168.7.2, Port: 22
@@ -48,7 +49,7 @@ io/config-pin
 using "./initialize_pins.sh"
 
 6. Consult the book sometimes but not heavily as it is pretty outdated and the methods they use to configure certain functions for the 
-BBB do not work. 
+BBB do not work. (such as configuring the pins)
 
 7. a lot of the answers you may find online pertain to older linux images so be aware of when they were written as what would have 
 worked then may not work now
@@ -74,6 +75,44 @@ prompt you for a password and then run the script. Same applies when running Pyt
 download WinSCP so you can transfer files from the Beaglebone to the Desktop. Host name: lci@192.168.7.2, User name: lci , password: 
 lci1234 and then locate the files from the beaglebone to copy onto your desktop then commit your changes thorugh your desktop using bash 
 or any other manner.
+
+
+USING THE BBB PCB SHIELD THAT INTERACTS WITH THE WHEELCHAIR
+
+1. it is vital that you make sure you mount the shield correctly on the beaglebone as one pin mismatch may fry the board. I have not 
+tested it yet but I wouldn't try either
+
+2. the PCB shield is comprised of 2 subsystems. One for reading joystick values into the the BBB's ADC pins, Pins 33 and 35, and 
+one of the systems for sending voltages through the BBB's SPI Pins into the DACs and the OP AMP which go directly into the OMNI. The 
+voltages sent through the OMNI should be within the range of 0-12 volts with ~6 volts being the center reference point (5.8 or 5.9 on the
+multimeter) P1 and P2 pins on the PCB should be used for the emergency stop. 
+
+3. the sample code I have written for the BBB is in the folder named 'BBB Python'. The files in there have preliminary 
+code to interact with certain features of the BBB shield. 
+
+You are welcome to change any of the files and write your own tests
+
+BBB_GPIO.py -> lights up the hex display on the BBB
+BBB_ADC.py -> utilizes the ADC and prints out values on the shell
+BBB_SPI.py -> uses both SPI masters to send signals to the DACs and OP AMPs which go directly to the wheelchair -> I use this if i want 
+to test small wheelchair movements. Make sure to center your values through the code as it is reliant on it heavily. You can measure
+the outputs going to the wheelchair by probing Ground and the left joint of the '182' resistors using a multimeter. it does need to be 
+centered first. The write4921 function is probably the most useful thing in this file because it allows us to write into the DACs 
+through the SPI pins on the BBB 
+BBB_PWM.py -> controls the pwm pins of the BBB. Refer to the pinout of the BeagleBone Black to see which SPI pins are used or look 
+in the code
+control_trial.py -> probably unfinished but it was my attempt at controlling the wheelchair with all the files previously mentioned. You 
+should try to write a newer version of it in the near future that will utilize the calibration button ('CLB' button on the PCB) so that
+whenever it is pushed, it will attempt to center the joystick and read its max and min values.
+
+*****
+Your task for this semester is to write your version of a control test using the BBB and ROS to operate the wheelchair with a joystick or 
+bluetooth. I have the schematics of the PCB in another folder which should have a PDF named PCB_DAC.pdf which will help you get 
+familiarized with all the pin configurations to control the WC. 
+*****
+
+OMNI errors can be found in the R-net OMNI Technical Manual
+
 
 
 Vim commands
