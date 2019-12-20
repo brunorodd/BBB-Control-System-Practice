@@ -76,7 +76,7 @@ some projects.
 11. if you get denied access when running any of the initialization scripts that i setup. Type in "sudo su" on the client which will 
 prompt you for a password and then run the script. Same applies when running Python programs.
 
-13. GitHub: if you have any difficulty pushing changes to git through the beaglebone black because of the TLS connection, i suggest you 
+13. GitHub: (not an issue with the wireless) if you have any difficulty pushing changes to git through the beaglebone black because of the TLS connection, i suggest you 
 download WinSCP so you can transfer files from the Beaglebone to the Desktop. Host name: lci@192.168.7.2, User name: lci , password: 
 lci1234 and then locate the files from the beaglebone to copy onto your desktop then commit your changes thorugh your desktop using bash 
 or any other manner.
