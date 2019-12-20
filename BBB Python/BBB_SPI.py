@@ -1,4 +1,4 @@
-#Copyright Bruno Rodriguez 2019
+#Copyright  Bruno Rodriguez 2019
 import Adafruit_BBIO.GPIO as GPIO
 import Adafruit_BBIO.PWM  as PWM
 from Adafruit_BBIO.SPI import SPI

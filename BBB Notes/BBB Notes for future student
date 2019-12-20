@@ -1,5 +1,9 @@
 BeagleBone Black notes for current Co-op Student
 
+**there's a lot of repetition in this document****
+
+First thing you should do is order 20 or 25 of these that way you can replace them ASAP on the BBB Shield: https://www.digikey.ca/product-detail/en/microchip-technology/MCP4921T-E-MS/MCP4921T-E-MSCT-ND/736001 
+
 Hello this is Bruno, the current co-op student for this semester, here are a few notes about the Beaglebone that are up to date to save
 you trouble looking at older versions of the BBB documentation.
 
@@ -11,15 +15,16 @@ you trouble looking at older versions of the BBB documentation.
   the tables in the lab and my BBB_control directory where i keep my initialization scripts for the internet and pins
 - for quick permissions you should be using the "sudo su" command and overwriting from there
 - you should familiarize yourself with linux commands as soon as possible
-- you should also download WinSCP if using the the BBB wireless to commit from desktop because the BBB wireless does not
+
+- Make sure to run everything as root using the  "sudo su" once you ssh into lci@192.168.7.2
 
 **** BE CAREFUL WITH THE AMOUNT OF VOLTAGE YOU PUT THROUGH THE BBB ****
 **** READ THE HOW TO DESTROY YOUR BEAGLEBONE SUBCHAPTER IN THE BOOK FOR MORE INFO ****
 
-1. Hold down the boot button before turning it on if you can't ssh into it normally using PuTTY then try ssh. wait until all the LEDs on 
-the USB turn off then release. If you can ssh into it normally then that's fine.
+1. (BBB Wireless does not have this issue) Hold down the boot button before turning it on if you can't ssh into it normally using PuTTY then try ssh. wait until all the LEDs on 
+the USB turn off then release. If you can ssh into it normally then that's fine upon boot.
 
-2. Internet Sharing: if you are using the BBB with the ethernet cable (recommended) here is a link to a video showing you how to 
+2. (BBB wireless already connected to UBC visitor) Internet Sharing: if you are using the BBB with the ethernet cable (recommended) here is a link to a video showing you how to 
 internet share between your laptop and BBB. https://www.youtube.com/watch?v=D-NEPiZDSx8. You will have to do this everytime you boot the 
 BBB. I have also written this as a script on the lci account in the BBB and can execute it to avoid writing a few lines on the shell. 
 You will need to reset the internet sharing stuff however.
@@ -32,10 +37,10 @@ google or anything online through PuTTY on the BBB
 
 **** updated **** BBB Wireless has access to the internet permanently now so just ping google from the BBB to confirm
 
-3. Sometimes if you dont turn on with the boot button held down, then you might run out of space on the BBB disk because of some weird 
+3. (Wireless does not have this issue) Sometimes if you dont turn on with the boot button held down, then you might run out of space on the BBB disk because of some weird 
 writing issue. it is actually really hard to find answers online for this so try to turn on with the boot button. 
 
-4. The BBB has an hdmi input that you can use on any monitor but if you use the hdmi then you can use spi1. I have not tested internet 
+4. The BBB has an hdmi input that you can use on any monitor but if you use the hdmi then you cant use spi1. I have not tested internet 
 sharing with this method.
 
 5. Since this is a newer image on the BBB disk, you can configure pins using "config-pin P9.21 spi" for example instead of going through 
@@ -45,8 +50,8 @@ io/config-pin
 
 
 ***I have written a script in Linux to configure all the pins after startup in BBB_control on the BBB ***
-*** you can run it either after startup or in a C/C++ program that executes the script *** it's labelled "initialize_pins.sh" and run it 
-using "./initialize_pins.sh"
+*** you can run it either after startup or in a C/C++ program that executes the script *** it's labelled "initialize_pins.sh" and it is in the Linux Scripts folder
+and run it using "./initialize_pins.sh"
 
 6. Consult the book sometimes but not heavily as it is pretty outdated and the methods they use to configure certain functions for the 
 BBB do not work. (such as configuring the pins)
@@ -63,10 +68,10 @@ echo 1000 > duty_cycle
 echo 2000 > period
 echo 1 > enable
 
-or you can use python to do it for you
+or you can use python to do it for you, I have a test program in the 'BBB Python' folder
 
 10. You can access pins using Python as well using Adafruit_BBIO library on Python, I have a github repository with my Python code for 
-some projects. I can give you access permission if you send me an email -> brunorodriguez1998@gmail.com
+some projects.
 
 11. if you get denied access when running any of the initialization scripts that i setup. Type in "sudo su" on the client which will 
 prompt you for a password and then run the script. Same applies when running Python programs.
@@ -92,7 +97,7 @@ code to interact with certain features of the BBB shield.
 
 You are welcome to change any of the files and write your own tests
 
-BBB_GPIO.py -> lights up the hex display on the BBB
+BBB_GPIO.py -> lights up the hex display on the BBB (The hex display on the current one has a missing resistor so it might not work.
 BBB_ADC.py -> utilizes the ADC and prints out values on the shell
 BBB_SPI.py -> uses both SPI masters to send signals to the DACs and OP AMPs which go directly to the wheelchair -> I use this if i want 
 to test small wheelchair movements. Make sure to center your values through the code as it is reliant on it heavily. You can measure
@@ -109,9 +114,60 @@ whenever it is pushed, it will attempt to center the joystick and read its max a
 Your task for this semester is to write your version of a control test using the BBB and ROS to operate the wheelchair with a joystick or 
 bluetooth. I have the schematics of the PCB in another folder which should have a PDF named PCB_DAC.pdf which will help you get 
 familiarized with all the pin configurations to control the WC. 
+
+If you need to send the BBB PCB shield to be remade, I have also included the gerber files in a .zip folder in the 'Wheelchair' Folder 
+for you to send directly to a manufacturer. I personally use JLC PCB for the manufacturing.
+
 *****
 
 OMNI errors can be found in the R-net OMNI Technical Manual
+
+
+***** HARDWARE *******
+
+In the blue bag labelled 'good', I have left one working BBB Shield for you to interact with the wheelchair, the led hex display is fidgetty and might need replacement but i 
+would not worry about it for the moment. (it has a loose 330 ohm resistor on the bottom, there's spares in the digikey box)
+
+The other BBB shields in the bag labelled 'Need DAC replacement' and the shields that need a DAC replacement of the MCP4921 chips because I accidentally fried them when I was 
+probing them trying to figure out a configuration problem with the beaglebone. They are very sensitive devices so be careful. The replacement mcp4921 chips will need to be 
+ordered via digikey by way of Ian so add them to the cart. Here is the digikey link to it:
+
+ https://www.digikey.ca/product-detail/en/microchip-technology/MCP4921T-E-MS/MCP4921T-E-MSCT-ND/736001
+
+these chips will need to be replaced by you or me using a heat gun which is conveniently located in rusty hut 120 and replaced using solder paste and the same heat gun. If you 
+need help then I can solder them for you.
+
+PROBING WHILE ON
+
+one of the few times you will probably have to probe the circuit while it's on is to check the output of the DACs or the voltage going into the wheelchair. I have put blue 
+tape over the DACs on the one shield that is working because if you probe any of the pins on them there is a chance they will short (because they are very small pieces with 
+thin connections). You can probe their outputs of the DACS by probing the via (hole) directly above the left DAC and ground or for the other DAC, probe the bottom right pin of
+the OP-amp and ground. Using the BBB_SPI.py code with the shield mounted, the probes should read around 1.01 volts at the outputs in the beginning. To probe output going into 
+the wheelchair, probe the top part of the 1.8k resistors (the ones that are completely black on the working one) and ground. 
+
+THE CLB BUTTON
+
+The CLB button is yours to program. I was going to use it as a calibration button to center the joystick when the wheelchair 
+was connected so you can do that too if you wish.
+
+P1 AND P2
+
+p1 and p2 are supposed  be emergency brake pins so short one of them while the wheelchair is on to trigger a brake.
+
+POWER
+
+Power LED indicates that the shield is turned on
+
+TX LED
+
+TX LED is up to you to configure if you want to make it blink when you are sending data to the DAC. It is a regular 
+GPIO pin so you can turn it on or off when you transmit a SPI message to the DACs.
+
+
+
+if you have any other questions please send me a message. 
+
+
 
 
 
