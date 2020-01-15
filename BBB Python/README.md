@@ -1,4 +1,4 @@
-##ADC:
+# ADC:
 
 BBB\_ADC.py is the original file written by Bruno. Slightly modified to show which outputs are coming from which pins.
 
@@ -14,34 +14,35 @@ Assuming GFS label facing to the left
 
 Pin 1
 
-Centered:
-P1: 0.55
-P1R: 2252.0
+Centered:  
+P1: 0.55  
+P1R: 2252.0  
 
-Forward:
-P1: 0.662
-P1R: 2714.0
+Forward:  
+P1: 0.662  
+P1R: 2714.0  
 
-Backwards:
-P1: 1830.0
-P1R: 0.447
+Backwards:  
+P1: 1830.0  
+P1R: 0.447  
 
-Right, Left: There are very little changes to the values from the centered position so i will assume ADC1 is a speed output and so the values only change when the joystick is in the forward or backwards orientation as lateral movement has no effect on the speed.
+Right, Left:  
+There are very little changes to the values from the centered position so i will assume ADC1 is a speed output and so the values only change when the joystick is in the forward or backwards orientation as lateral movement has no effect on the speed.
 
 -------------------------------------------------
 Pin 2
 
 Centered:
-P2:0.544
-P2R: 2229.0
+P2: 0.544  
+P2R: 2229.0  
 
-Right:
-0.66
-2704.0
+Right:  
+0.66  
+2704.0  
 
-Left:
-0.435
-1783.0
+Left:  
+0.435  
+1783.0  
 
 The forward and backward now have very little changes to the value from the centered position, so this is like the opposite of the first ADC pin. This will likely be used to control the amount of turn wanted in the wheels.
 
