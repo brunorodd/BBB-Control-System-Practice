@@ -90,3 +90,8 @@ Our SPI configuration differs slightly from the standard spi configuration and w
 Understanding highByte:
 -takes in number and outputs 0 if it is less than 8 bits in length  
 -if greater than 8 bits in length, bitwise shift which is equivalent to dividing by 2^8 and then bitwise and which will slice off any bits greater past the first 8
+
+
+The DACs have an SPI interface. Our BBB will be the master which writes to the SDI on the DACs which are the slaves. Those DACs will then output a voltage proportional to the op-amp for amplification and into the OMNI  
+
+
