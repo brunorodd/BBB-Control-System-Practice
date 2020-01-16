@@ -62,3 +62,26 @@ OMNI -> PCB\_DAC
 9 -> 6	Connected to 7 (12V 100mA)
 
 Joystick Speed and Joystick Direction will be where the Analog outputs of our DAC on the shield will go. Again see the OMNI Manual for these specifications when needed. Page 168.
+
+
+#SPI
+
+Intended SPI Pin Configuration
+SPI1:  
+CS: P9\ 23  
+DI: P9\ 18  
+SCLK: P9\ 22  
+
+SPI2:  
+CS: P9\ 27  
+DI: P9\_30  
+SCLK: P9\_31  
+
+Our SPI configuration differs slightly from the standard spi configuration and what you will see in most tutorials.  
+- We are only using SPI for data input so do not worry about the pins labelled DO(data output) in tutorials  
+- We are not using the usual Chip Select Pins shown in tutorials either, although they are configured.  
+- We are esentially simulating the chip select function by using GPIO pins and holding them high when idle and dropping low when writing  
+
+Understanding highByte:
+-takes in number and outputs 0 if it is less than 8 bits in length  
+-if greater than 8 bits in length, bitwise shift which is equivalent to dividing by 2^8 and then bitwise and which will slice off any bits greater past the first 8
