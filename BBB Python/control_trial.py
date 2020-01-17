@@ -104,8 +104,8 @@ def calib(index):
             print("Calibrating Direction Threshold. Hold the Joystick all the way forward")
             input("Press Enter to Continue: ")
             time.sleep(0.5)
-            for i in range(length):
-                if abs(joystickForward[i]-joystickForward[i-1]) > 10:
+            for i in range(length-1):
+                if abs(joystickForward[i+1]-joystickForward[i]) > 10:
                     print("Error in Calibration. Recalibrating...")
                     recalibration = True
                     time.sleep(1)
