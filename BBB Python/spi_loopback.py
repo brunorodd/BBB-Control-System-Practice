@@ -9,9 +9,10 @@ from Adafruit_BBIO.SPI import SPI
 #spi = SPI(1,1)	#/dev/spidev2.1
 
 spi = SPI(1,0) 
+spi.cshigh = False 
 print(spi.xfer2([32, 11, 110, 22, 220]))
 spi.close() 
 
-spii2 = SPI(2, 0)
+spi2 = SPI(2, 0)
 print spi2.xfer2([32, 11, 110, 22, 220])
 spi2.close()

@@ -46,8 +46,8 @@ spi1 = SPI(1,0)
 spi2 = SPI(2,0)
 spi1.msh = 10500000
 spi2.msh = 10500000
-spi1.cshigh = True
-spi2.cshigh = True
+spi1.cshigh = False 
+spi2.cshigh = False
 
 write4921(845, spi1,cs1)
 write4921(845,spi2,cs2)

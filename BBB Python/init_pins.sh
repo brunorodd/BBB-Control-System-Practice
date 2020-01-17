@@ -1,7 +1,7 @@
-
+#!/bin/bash
+SHELL=/bin/bash
 ## BBB configure pins script
 #ADC is already configured upon startup
-sudo su
 sleep 1
 
 # configure pins for the
@@ -64,5 +64,8 @@ config-pin P8.46 gpio
 
 # reconfigurable digital
 
+#print statement to indicate pins commands have been executed
+echo "pins configured"
 
 sleep 1
+exit
