@@ -37,7 +37,6 @@ config-pin P9.15 gpio
 config-pin P9.23 gpio
 config-pin P9.25 gpio
 config-pin P9.27 gpio
-config-pin P9.30 gpio
 config-pin P9.41 gpio
 config-pin P8.7  gpio
 config-pin P8.8  gpio

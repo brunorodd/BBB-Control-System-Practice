@@ -9,8 +9,8 @@ spi1 = SPI(1,0)
 spi2 = SPI(2,0)
 spi1.msh = 10500000
 spi2.msh = 10500000
-spi1.cshigh = True 
-spi2.cshigh = True
+spi1.cshigh = False
+spi2.cshigh = False 
 
 
 GPIO.setup(cs1, GPIO.OUT)
@@ -49,4 +49,4 @@ while True:
     analogValue2 = 2048
     write4921(analogValue2, spi2, cs2) 
     write4921(analogValue, spi1, cs1)
-    time.sleep(2)
+    #time.sleep(.001)
