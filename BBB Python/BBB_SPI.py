@@ -3,6 +3,7 @@ import Adafruit_BBIO.GPIO as GPIO
 import Adafruit_BBIO.PWM  as PWM
 from Adafruit_BBIO.SPI import SPI
 import time
+from eStop import e_stop, release 
 
 int_bits = 32
 cs1 = "P9_23"
@@ -10,6 +11,7 @@ cs2 = "P9_27"
 
 #it should be noted that this function only works with numbers that are less than or equal to  2 bytes in length
 def highByte(num):
+    num = int(num)
     length = num.bit_length()
     if length < 8:
         return 0
@@ -18,10 +20,12 @@ def highByte(num):
     return high
 
 def lowByte(num):
+    num = int(num)
     return num & 0xFF
 
 
 def write4921(value, SPI, cs_pin):
+    value = int(value)
     GPIO.output(cs_pin, GPIO.LOW)
     data = highByte(value)
     data = 0b00001111 & data
@@ -48,13 +52,25 @@ spi1.msh = 10500000
 spi2.msh = 10500000
 spi1.cshigh = False 
 spi2.cshigh = False
+release()
 
-write4921(845, spi1,cs1)
-write4921(845,spi2,cs2)
+def center(value):
+    write4921(value, spi1, cs1)
+    write4921(value, spi2, cs2)
 
-while True:
-    analogValue = input("DAC Input 1: ")
-    analogValue2 = input("DAC Input 2: ")
-    write4921(analogValue2, spi2, cs2) #in testing right now
-    write4921(analogValue, spi1, cs1)
+def spi_write(speed, direction):
+    write4921(speed, spi2, cs2) #in testing right now
+    write4921(direction, spi1, cs1)
     time.sleep(2)
+    
+# spi1, spi2 = spi_setup()
+# center(830)
+# while True:
+#     analogValue = raw_input("DAC Input 1: ")
+#     analogValue2 = raw_input("DAC Input 2: ")
+#     if (analogValue == "" or analogValue2 == ""):
+#         e_stop()
+#     else:
+#         write4921(int(analogValue2), spi2, cs2) #in testing right now
+#         write4921(int(analogValue), spi1, cs1)
+#         time.sleep(2)
