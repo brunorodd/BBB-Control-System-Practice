@@ -40,7 +40,7 @@ def calib_left():
     time.sleep(0.5)
     for i in range(calib_length):
         jsLeft.append(ADC.read_raw(ADC_pin2))
-    direction_in[1] = sum(jsLeft) / len(jsLeft)
+    direction_in[0] = sum(jsLeft) / len(jsLeft)
 
 
 def calib_right():
@@ -49,7 +49,7 @@ def calib_right():
     time.sleep(0.5)
     for i in range(calib_length):
         jsRight.append(ADC.read_raw(ADC_pin2))
-    direction_in[0] = sum(jsRight) / len(jsRight)
+    direction_in[1] = sum(jsRight) / len(jsRight)
 
 
 def calib_forward():
@@ -58,7 +58,7 @@ def calib_forward():
     time.sleep(0.5)
     for i in range(calib_length):
         jsForward.append(ADC.read_raw(ADC_pin1))
-    speed_in[0] = sum(jsForward) / len(jsForward)
+    speed_in[1] = sum(jsForward) / len(jsForward)
 
 
 def calib_backward():
@@ -67,7 +67,7 @@ def calib_backward():
     time.sleep(0.5)
     for i in range(calib_length):
         jsBackward.append(ADC.read_raw(ADC_pin1))
-    speed_in[1] = sum(jsBackward) / len(jsBackward)
+    speed_in[0] = sum(jsBackward) / len(jsBackward)
 
 def calib():
     print("Entered Calibration Mode")

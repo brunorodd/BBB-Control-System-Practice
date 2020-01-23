@@ -30,9 +30,9 @@ def write4921(value, SPI, cs_pin):
     data = highByte(value)
     data = 0b00001111 & data
     data = 0b00110000 | data
-    print "data as is: {}".format(data)
-    print "data as a list {}".format([data])
-    print (SPI.xfer2([data]))
+#    print "data as is: {}".format(data)
+#    print "data as a list {}".format([data])
+#    print (SPI.xfer2([data]))
     data = 0xFF & value
     SPI.xfer2([data])
     GPIO.output(cs_pin, GPIO.HIGH)
