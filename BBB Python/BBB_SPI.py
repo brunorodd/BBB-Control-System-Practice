@@ -61,7 +61,6 @@ def center(value):
 def spi_write(speed, direction):
     write4921(speed, spi2, cs2) #in testing right now
     write4921(direction, spi1, cs1)
-    
 # spi1, spi2 = spi_setup()
 # center(830)
 # while True:
